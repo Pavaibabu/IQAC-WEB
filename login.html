@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Links (optional, you can reuse this from the original page) -->
+    <nav class="container bg-blue-900 mx-auto p-3 flex justify-center items-center">
+        <div>
+            <ul class="hidden md:flex space-x-8 text-white font-medium">
+                <li class="hover:text-yellow-500 cursor-pointer">
+                    <a href="index.html#about">About</a>
+                </li>
+                <li class="hover:text-yellow-500 cursor-pointer">
+                    <a href="quality.html">Quality Initiatives</a>
+                </li>
+                <li class="hover:text-yellow-500 cursor-pointer">
+                    <a href="index.html#aqar">AQAR Report</a>
+                </li>
+                <li class="hover:text-yellow-500 cursor-pointer">
+                    <a href="feedback.html">Feedback</a>
+                </li>
+                <li class="hover:text-yellow-500 cursor-pointer">
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+   
+    <section id="login">
+        <div class="grid grid-cols-1 md:grid-cols-2  h-screen items-center px-8">
+            
+            <!-- Staff Login Section (Left Column) -->
+            <div class="bg-blue-900 shadow-lg rounded-lg p-8 max-w-md mx-auto w-full">
+                <h2 class="text-2xl  text-yellow-500 font-bold text-center mb-6">Staff Login</h2>
+                <form action="staff_login.php" method="POST" class="space-y-4">
+                    <div class="input-group">
+                        <label for="staff-id" class="block text-sm font-medium text-gray-50">Staff ID</label>
+                        <input type="text" id="staff-id" name="staff-id" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required="">
+                    </div>
+                    <div class="input-group">
+                        <label for="password" class="block text-sm font-medium text-gray-50">Password</label>
+                        <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required="">
+                    </div>
+                    <button type="submit" class="w-full font-bold bg-yellow-600   text-xl text-white py-2 rounded-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Login</button>
+                </form>
+                <p class="mt-4 text-sm text-white">Forgot your password? <a href="reset_password.html" class="text-amber-500 hover:underline">Reset here</a></p>
+            </div>
+      
+            <!-- Student Login Section (Right Column) -->
+            <div class="bg-blue-900 shadow-lg rounded-lg p-8 max-w-md mx-auto w-full">
+                <h2 class="text-2xl font-bold  text-yellow-500 text-center mb-6">Student Login</h2>
+                <form action="login.php" method="POST" class="space-y-4">
+                    <div class="input-group">
+                        <label for="register-number" class="block text-sm font-medium text-gray-50">Register Number</label>
+                        <input type="text" id="register-number" name="register-number" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required="">
+                    </div>
+                    <div class="input-group">
+                        <label for="password" class="block text-sm font-medium text-gray-50">Password</label>
+                        <input type="password" id="password" name="password" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" required="">
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-600 font-bold  text-xl text-white py-2 rounded-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">Login</button>
+                </form>
+                <p class="mt-4 text-sm text-white">Don't have an account? <a href="register.html" class="text-amber-500 hover:underline">Register here</a></p>
+            </div>
+      
+        </div>
+      </section>
+
+</body>
+</html>
